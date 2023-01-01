@@ -7,8 +7,6 @@ from src.quote_engine.quote_model import QuoteModel
 class DocxIngestor(IngestorInterface):
     """Class to parse .docx file."""
 
-
-
     @classmethod
     def parse(cls, path: str) -> List[QuoteModel]:
         """Parse .docx file and returns list of quote models."""

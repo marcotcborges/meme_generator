@@ -6,8 +6,6 @@ from src.quote_engine.quote_model import QuoteModel
 class TextIngestor(IngestorInterface):
     """Class to parse text file."""
 
-
-
     @classmethod
     def parse(cls, path: str) -> List[QuoteModel]:
         """Parse txt file and returns list of quote models."""

@@ -7,8 +7,6 @@ from src.quote_engine.quote_model import QuoteModel
 class CSVIngestor(IngestorInterface):
     """Class to parse .csv file."""
 
-   
-
     @classmethod
     def parse(cls, path: str) -> List[QuoteModel]:
         """Parse .csv file and returns list of quote models."""

@@ -1,8 +1,8 @@
 import os
 from abc import ABC, abstractmethod
 
-class IngestorInterface(ABC):
 
+class IngestorInterface(ABC):
 
     @classmethod    
     def can_ingest(cls, path, allowed_extension) -> bool:    

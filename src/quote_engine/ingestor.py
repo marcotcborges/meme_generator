@@ -7,10 +7,10 @@ from src.quote_engine.pdf_ingestor import PDFIngestor
 from src.quote_engine.text_ingestor import TextIngestor
 from src.quote_engine.quote_model import QuoteModel
 
+
 class Ingestor(IngestorInterface):
 
     ingestors = [CSVIngestor, DocxIngestor, PDFIngestor, TextIngestor]
-    ingestors = [CSVIngestor, DocxIngestor, TextIngestor]
 
     @classmethod
     def parse(cls, path) -> List[QuoteModel]:

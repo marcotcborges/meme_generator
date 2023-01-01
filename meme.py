@@ -1,9 +1,9 @@
 import argparse
 import os
 import random
-from src.quote_engine.QuoteModel import QuoteModel
-from src.quote_engine.QuoteEngine import Ingestor
-from src.meme_engine.MemeEngine import MemeEngine
+from src.quote_engine.quote_model import QuoteModel
+from src.quote_engine.ingestor import Ingestor
+from src.meme_engine.meme_engine import MemeEngine
 
 
 def generate_meme(path=None, body=None, author=None):
@@ -19,7 +19,7 @@ def generate_meme(path=None, body=None, author=None):
 
         img = random.choice(imgs)
     else:
-        img = path[0]
+        img = path
 
     if body is None:
         quote_files = ['src/_data/DogQuotes/DogQuotesTXT.txt',
@@ -36,7 +36,7 @@ def generate_meme(path=None, body=None, author=None):
             raise Exception('Author Required if Body is Used')
         quote = QuoteModel(body, author)
 
-    meme = MemeEngine('./tmp')
+    meme = MemeEngine('static')
     path = meme.make_meme(img, quote.body, quote.author)
     return path
 
